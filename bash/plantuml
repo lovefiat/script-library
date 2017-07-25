@@ -1,0 +1,13 @@
+#!/bin/bash
+
+PGM=./plantuml.jar
+
+if [ $# -ne "0" ]; then
+	# PlantUMLを実行
+	echo $*
+	java -jar $PGM $*
+else
+	java -jar $PGM -h
+	echo '(例)'
+	echo 'plantuml -o ../ -v -charset UTF-8 *.plantuml'
+fi
